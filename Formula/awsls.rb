@@ -2,24 +2,24 @@
 class Awsls < Formula
   desc "A list command for AWS resources"
   homepage "https://github.com/jckuester/awsls"
-  version "0.8.0"
+  version "0.8.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jckuester/awsls/releases/download/v0.8.0/awsls_0.8.0_darwin_amd64.tar.gz"
-    sha256 "7e95893b0d3f1e51ad381ce611dbb85d5ccb2d34ba767b5fc3d6233809522453"
+    url "https://github.com/jckuester/awsls/releases/download/v0.8.1/awsls_0.8.1_darwin_amd64.tar.gz"
+    sha256 "94f81e86346565af20804ad28b75c66cd616f5d655bb507d9b2cbf524470e11d"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jckuester/awsls/releases/download/v0.8.0/awsls_0.8.0_linux_amd64.tar.gz"
-    sha256 "4b72c8ed27b995f59108f6bafda676635645bf4b7618f0f4d69e0078b202b8e2"
+    url "https://github.com/jckuester/awsls/releases/download/v0.8.1/awsls_0.8.1_linux_amd64.tar.gz"
+    sha256 "7b320a931aad40c8a1c8107a3bb15bdbb82bbcabf9d3f48623b65ed9fe36e804"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsls/releases/download/v0.8.0/awsls_0.8.0_linux_armv6.tar.gz"
-    sha256 "c2816bfd41a4b14c73388b05b55196a68827ddc02a34ae4cb786aaba25e41b9b"
+    url "https://github.com/jckuester/awsls/releases/download/v0.8.1/awsls_0.8.1_linux_armv6.tar.gz"
+    sha256 "f7ead7735fb5a20e923ca2f77e320a1f8b522ab2618676732363b703fbc97fca"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsls/releases/download/v0.8.0/awsls_0.8.0_linux_arm64.tar.gz"
-    sha256 "2a952cc28ca913e0d130739225790bf7318c7abfd63f62cf5a9209840a070e4c"
+    url "https://github.com/jckuester/awsls/releases/download/v0.8.1/awsls_0.8.1_linux_arm64.tar.gz"
+    sha256 "c3691cf4e4e7b4f4ba92f16b8ec72cf744dcc66f74f8b5be679582530d2fdd59"
   end
 
   def install
