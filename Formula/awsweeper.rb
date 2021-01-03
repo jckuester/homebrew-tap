@@ -2,24 +2,24 @@
 class Awsweeper < Formula
   desc "A tool for cleaning your AWS account"
   homepage "https://github.com/jckuester/awsweeper"
-  version "0.11.0"
+  version "0.11.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.0/awsweeper_0.11.0_darwin_amd64.tar.gz"
-    sha256 "d964645a5cdeaca6b36244b2a4e598218f018b83d9824053387e612a0f37254d"
+    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.1/awsweeper_0.11.1_darwin_amd64.tar.gz"
+    sha256 "c513e54675e7cbfd62bb9e1cba2bc6e6bd97151be7b51b2637ac466585f82e9a"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.0/awsweeper_0.11.0_linux_amd64.tar.gz"
-    sha256 "ef6c5bc3d72c92470b51a78e761ebd806608e5f53981efa87175a36f4f1ae2ce"
+    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.1/awsweeper_0.11.1_linux_amd64.tar.gz"
+    sha256 "da28a99ca549c2d9ed9e32d388a89f46610fed9953601240eadf638045fa1ba2"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.0/awsweeper_0.11.0_linux_armv6.tar.gz"
-    sha256 "e568a0a6e40e657416ac20955e38c886b1bb6c96ba22e6e6d3d4c5a032ac5dfd"
+    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.1/awsweeper_0.11.1_linux_armv6.tar.gz"
+    sha256 "55a3723f0ac08f01294c911bfcfb6cd34ddece7d4300c36c1f1fd7909ad0aeab"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.0/awsweeper_0.11.0_linux_arm64.tar.gz"
-    sha256 "5f39b176cd5f5514a619db753c4755f63653cb038a135c98102c94a5d9748aaa"
+    url "https://github.com/jckuester/awsweeper/releases/download/v0.11.1/awsweeper_0.11.1_linux_arm64.tar.gz"
+    sha256 "c2576006f12c9be480b3a2bac5b1c9b4e04720387c3a44b2fe7cd455ef55e64a"
   end
 
   def install
