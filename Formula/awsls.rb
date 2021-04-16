@@ -5,24 +5,28 @@
 class Awsls < Formula
   desc "A list command for AWS resources"
   homepage "https://github.com/jckuester/awsls"
-  version "0.9.1"
+  version "0.10.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/jckuester/awsls/releases/download/v0.9.1/awsls_0.9.1_darwin_amd64.tar.gz"
-    sha256 "7395fbcb34cb04f5cc7f194a7d6738d444c98dbf537de2f696e12f6d454e4d81"
+    url "https://github.com/jckuester/awsls/releases/download/v0.10.0/awsls_0.10.0_darwin_amd64.tar.gz"
+    sha256 "d1648fcbff9caa2a091be3d4e7ee0369bbcd2e4d0351019763bd926c5140768e"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/jckuester/awsls/releases/download/v0.10.0/awsls_0.10.0_darwin_arm64.tar.gz"
+    sha256 "bc4177f1e8da37006f0de6b9633d613d743bd0bc8a96e6a3def4d4e101e78247"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jckuester/awsls/releases/download/v0.9.1/awsls_0.9.1_linux_amd64.tar.gz"
-    sha256 "20e52d2127aad854445ea849a1e3a1e3aacae118003c4be397e18d6b2f6054b4"
+    url "https://github.com/jckuester/awsls/releases/download/v0.10.0/awsls_0.10.0_linux_amd64.tar.gz"
+    sha256 "5ef4b9d7272452f1d9433872251eae2ad4ee28214e4f3bc7a0cdc7add8a6d64b"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsls/releases/download/v0.9.1/awsls_0.9.1_linux_armv6.tar.gz"
-    sha256 "e413523bb49741e56737553180218879ec437fe7948060af96668801b1a96111"
+    url "https://github.com/jckuester/awsls/releases/download/v0.10.0/awsls_0.10.0_linux_armv6.tar.gz"
+    sha256 "3a4bcd9b8d0b1cc0377690dcd551046622bd68a514cd5c24522f21dffec07d4e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsls/releases/download/v0.9.1/awsls_0.9.1_linux_arm64.tar.gz"
-    sha256 "50b0357a3dc3d95e05d169d2c0cce1bcef893717a5345bec224739e0132d6110"
+    url "https://github.com/jckuester/awsls/releases/download/v0.10.0/awsls_0.10.0_linux_arm64.tar.gz"
+    sha256 "7e0ddbfe4fc30ae89a883695d7ead5f65bd0c17c58a2f26392f040e3cf8e7be9"
   end
 
   def install
