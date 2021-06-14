@@ -5,24 +5,29 @@
 class Awsrm < Formula
   desc "A remove command for AWS resources"
   homepage "https://github.com/jckuester/awsrm"
-  version "0.1.0"
+  version "0.2.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/jckuester/awsrm/releases/download/v0.1.0/awsrm_0.1.0_darwin_amd64.tar.gz"
-    sha256 "bb4a7bc155918908a2ee0558886492c48c57f6f44df00d45eab302c76f4b2593"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_darwin_amd64.tar.gz"
+      sha256 "f82aa2004b328fd3cda6b5e27220b70c759822138875cd90ceef9911649b7f31"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jckuester/awsrm/releases/download/v0.1.0/awsrm_0.1.0_linux_amd64.tar.gz"
-    sha256 "65f9c414bd9c4d152bb7724327aff0911f83841a3ae4484d1f1d067d41eeffd2"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsrm/releases/download/v0.1.0/awsrm_0.1.0_linux_armv6.tar.gz"
-    sha256 "e812b55b04148a83d49174b3a10a96618f61b2ed0835cf0ee9b990946ecb0d9a"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/jckuester/awsrm/releases/download/v0.1.0/awsrm_0.1.0_linux_arm64.tar.gz"
-    sha256 "1b8438218d71cf39d6320418bf6c936e44ec4ff2e41886c486d53fabca577ee4"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_linux_amd64.tar.gz"
+      sha256 "8cbc600a64624c48795546fae2bf93c4573ab66824f10f8afb07d56fb2a7b9ab"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_linux_armv6.tar.gz"
+      sha256 "80387156fcce8a9e81e977baf027bf34cf8a54204e2931c4368a9082668a7db4"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_linux_arm64.tar.gz"
+      sha256 "a2923a59a26cb348841254fc86ce3cb48585dd967b5ac55d9d7940922d9bb16d"
+    end
   end
 
   def install
