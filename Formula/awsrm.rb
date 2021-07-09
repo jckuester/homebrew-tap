@@ -5,28 +5,32 @@
 class Awsrm < Formula
   desc "A remove command for AWS resources"
   homepage "https://github.com/jckuester/awsrm"
-  version "0.2.0"
+  version "0.2.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_darwin_amd64.tar.gz"
-      sha256 "f82aa2004b328fd3cda6b5e27220b70c759822138875cd90ceef9911649b7f31"
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.1/awsrm_0.2.1_darwin_amd64.tar.gz"
+      sha256 "b651d1afc926688e6eda319226d15fdf04d140855e4401f2e9effd3269a56c2d"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.1/awsrm_0.2.1_darwin_arm64.tar.gz"
+      sha256 "f2585e03a9acb4537f87b984987c2683764367b17bc4bc150edb6158c7692aff"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_linux_amd64.tar.gz"
-      sha256 "8cbc600a64624c48795546fae2bf93c4573ab66824f10f8afb07d56fb2a7b9ab"
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.1/awsrm_0.2.1_linux_amd64.tar.gz"
+      sha256 "419ffc813854334781b0d42a65698721ebd7cc19d1444361ce8244818494466f"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_linux_armv6.tar.gz"
-      sha256 "80387156fcce8a9e81e977baf027bf34cf8a54204e2931c4368a9082668a7db4"
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.1/awsrm_0.2.1_linux_armv6.tar.gz"
+      sha256 "8cad725b156c64d57a0931fba1ba260ade9a71aab9361f3d29d4de29f100f5c5"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.2.0/awsrm_0.2.0_linux_arm64.tar.gz"
-      sha256 "a2923a59a26cb348841254fc86ce3cb48585dd967b5ac55d9d7940922d9bb16d"
+      url "https://github.com/jckuester/awsrm/releases/download/v0.2.1/awsrm_0.2.1_linux_arm64.tar.gz"
+      sha256 "587ee300c72f9e4c414afcfc5f118482727d44355cc958805f90a43b4df9f09a"
     end
   end
 
