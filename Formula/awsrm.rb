@@ -5,20 +5,20 @@
 class Awsrm < Formula
   desc "A remove command for AWS resources"
   homepage "https://github.com/jckuester/awsrm"
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.3.0/awsrm_0.3.0_darwin_arm64.tar.gz"
-      sha256 "2bad33e8df583e330bd5b33db7e69469ec065a2ca190ba12808d599310410282"
+    if Hardware::CPU.intel?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.4.0/awsrm_0.4.0_darwin_amd64.tar.gz"
+      sha256 "2325b0554714032e1a63100d39407f17187478bb73f1811bcd17e7f3e6d04ac1"
 
       def install
         bin.install "awsrm"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.3.0/awsrm_0.3.0_darwin_amd64.tar.gz"
-      sha256 "b98118f994e4cf8fc9b8af38f4b1d49f0109190c255f7e85a222fb4cbb7dcabb"
+    if Hardware::CPU.arm?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.4.0/awsrm_0.4.0_darwin_arm64.tar.gz"
+      sha256 "57113e2ed90c9ad8e58451f4132d9d4c6c3b7984817ea3b1d9331f6617bee046"
 
       def install
         bin.install "awsrm"
@@ -27,25 +27,25 @@ class Awsrm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.3.0/awsrm_0.3.0_linux_amd64.tar.gz"
-      sha256 "68592fe9346a8248ae74c71ae6d6157cf312a7d5478ea10880ea56ba84179c7e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.4.0/awsrm_0.4.0_linux_arm64.tar.gz"
+      sha256 "42b891fc18f63b22be373b79b407fe2e2e556948aeb697bc2ad15fca1f2d0858"
 
       def install
         bin.install "awsrm"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.3.0/awsrm_0.3.0_linux_arm64.tar.gz"
-      sha256 "abcc9e63f11d9199d5d629a8e3e373c19b59b8845bceb71667d0d8ad34d8d5fd"
+    if Hardware::CPU.intel?
+      url "https://github.com/jckuester/awsrm/releases/download/v0.4.0/awsrm_0.4.0_linux_amd64.tar.gz"
+      sha256 "16a3e7a27085601c1c631cfec7141f6388926702e75aa242af5368e61affc7a9"
 
       def install
         bin.install "awsrm"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jckuester/awsrm/releases/download/v0.3.0/awsrm_0.3.0_linux_armv6.tar.gz"
-      sha256 "5b4a76b131e69db70970e34addcaa18cf2a026b3a9692c468046fe3fa4992ef2"
+      url "https://github.com/jckuester/awsrm/releases/download/v0.4.0/awsrm_0.4.0_linux_armv6.tar.gz"
+      sha256 "48934b3b5ff29d6662c1be9c1d8fa7d37eaee77984230e927d5b2fe445746a76"
 
       def install
         bin.install "awsrm"
