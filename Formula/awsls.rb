@@ -3,7 +3,6 @@ class Awsls < Formula
   desc "A list command for AWS resources"
   homepage "https://github.com/jckuester/awsls"
   version "0.11.0"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/jckuester/awsls/releases/download/v0.11.0/awsls_0.11.0_darwin_amd64.tar.gz"
